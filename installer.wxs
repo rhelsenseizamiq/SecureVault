@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Product Id="*" 
+           Name="ZM Password Manager" 
+           Language="1033" 
+           Version="1.0.0.0" 
+           Manufacturer="ZM-Development" 
+           UpgradeCode="7E9D1BE0-9570-4459-96B4-185A4F2C6D67">
+
+    <Package InstallerVersion="500" Compressed="yes" InstallScope="perMachine" />
+
+    <MediaTemplate />
+    
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="INSTALLFOLDER" Name="ZMPasswordManager" />
+      </Directory>
+    </Directory>
+
+    <DirectoryRef Id="INSTALLFOLDER">
+      <Component Id="MainExecutable" Guid="DE38BAE2-CA02-4A91-B55B-4C9984E6C741">
+        <File Source="C:\Users\008162\Desktop\PythonApplication1\PythonApplication1\dist\PythonApplication1.exe" KeyPath="yes" />
+      </Component>
+    </DirectoryRef>
+
+    <Feature Id="ProductFeature" Title="ZM Password Manager" Level="1">
+      <ComponentRef Id="MainExecutable" />
+    </Feature>
+  </Product>
+</Wix>

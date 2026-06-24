@@ -1,0 +1,59 @@
+# ── SecureVault ──────────────────────────────────────────────────────────────
+
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+*.egg-info/
+
+# Build artifacts (the .exe ships as a GitHub Release asset, not in git)
+build/
+dist/
+*.exe
+*.msi
+*.wixobj
+*.wixpdb
+*.manifest
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE / editor
+.vscode/
+.idea/
+.vs/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Claude / local agent settings
+.claude/
+
+# Application data & secrets (these live in %APPDATA%/SecureVault, never in git)
+*.enc
+*.dat
+key.key*
+settings.json
+zterm_sessions*.json
+zterm_snippets.json
+zterm_history.json
+zterm_jump.json
+*.ztsessions
+*.svbackup
+*.log
+
+# Local backups / screenshots (may contain internal infra details)
+*_backup_*/
+*.jpg
+*.jpeg
+*.png
+*.zip
